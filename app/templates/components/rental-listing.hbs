@@ -1,0 +1,14 @@
+{{!--yield--}}
+
+<h2>{{rental.title}}</h2>
+<p class="hidden-xs">Owner: {{rental.owner}}</p>
+<p>Type: {{rental-property-type rental.type}}</p>
+<p>Location: {{rental.city}}</p>
+<p>Number of bedrooms: {{rental.bedrooms}}</p>
+
+{{#if isImageShowing}}
+  <p><img src={{rental.image}} alt={{rental.type}} width="500" class="img-responsive img-rounded"></p>
+  <button {{action "imageHide"}} class="btn btn-default">Hide image</button>
+{{else}}
+  <button {{action "imageShow"}} class="btn btn-primary">Show image</button>
+{{/if}}
