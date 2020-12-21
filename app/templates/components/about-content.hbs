@@ -1,0 +1,7 @@
+{{yield}}
+{{#if aboutTest}}
+  <button {{action "testConsole"}} class="btn btn-default">Test Console 1</button>
+{{else}}
+  Testing<br>
+  <button {{action "testConsoleNext"}} class="btn btn-default">Test Console 2</button>
+{{/if}}
